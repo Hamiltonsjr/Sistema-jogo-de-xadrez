@@ -1,12 +1,10 @@
 package application;
 
-import boardgame.Position;
+import boardgame.Board;
 
 public class Ex51 {
     public static void main(String[] args) {
 
-        Position position = new Position(3, 5);
-        System.out.print(position);
-        
+        Board board = new Board(8, 8);
     }
 }
