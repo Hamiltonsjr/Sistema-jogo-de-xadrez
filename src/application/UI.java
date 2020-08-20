@@ -1,5 +1,6 @@
 package application;
 
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
@@ -40,6 +41,7 @@ public class UI {
 
             String string = scanner.nextLine();
             char column = scanner.next().charAt(0);
+
             // recorta a string na posição 1 e converte para inteiro com o Integer.parseInt
             int row = Integer.parseInt(string.substring(1));
             return new ChessPosition(column, row);
@@ -47,6 +49,13 @@ public class UI {
         catch (RuntimeException runtimeException){
             throw new InputMismatchException("Erro nessa posição do tabuleiro, valores válidos são de a1 até h8");
         }
+    }
+
+    public static void printMatch(ChessMatch chessMatch){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turno :" + chessMatch.getTurn());
+        System.out.println("Esperando jogador:" + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces){
