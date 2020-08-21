@@ -37,4 +37,7 @@ public abstract class Piece {
         return false;
     }
 
+
+    public void add(Piece capturedPiece) {
+    }
 }
