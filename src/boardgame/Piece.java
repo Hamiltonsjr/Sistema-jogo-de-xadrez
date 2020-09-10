@@ -40,4 +40,6 @@ public abstract class Piece {
 
     public void add(Piece capturedPiece) {
     }
+
+    public abstract void remove(Piece capturedPiece);
 }
