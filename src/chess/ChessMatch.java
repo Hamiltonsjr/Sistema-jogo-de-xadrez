@@ -3,10 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
-import chess.piece.Bishop;
-import chess.piece.King;
-import chess.piece.Knight;
-import chess.piece.Rook;
+import chess.piece.*;
 
 import java.util.ArrayList;
 import java.util.List;

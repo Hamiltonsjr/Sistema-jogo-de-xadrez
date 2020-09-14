@@ -31,56 +31,41 @@ public abstract class Knight extends ChessPiece {
 
         Position position = new Position(0,0);
 
-        // Movimento a cima.
 
         position.setValues(position.getRow()-1,position.getColumn()-2);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
 
-        // Movimento a baixo.
-
         position.setValues(position.getRow() -2,position.getColumn()-1);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getRow()] = true;
         }
-
-        // Movimento a esquerda.
 
         position.setValues(position.getRow()-2,position.getColumn() +1);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
 
-        // Movimento a direita.
-
         position.setValues(position.getRow()-1,position.getColumn() + 2);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
-
-        // Movimento Noroeste.
 
         position.setValues(position.getRow() +1,position.getColumn() +2);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
 
-        // Movimento Nordeste.
-
         position.setValues(position.getRow() +2,position.getColumn() +1);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
 
-        //  Movimento Suldoeste.
-
         position.setValues(position.getRow() +2,position.getColumn() -1);
         if(getBoard().positionExists(position) && canMove(position)){
             matrix[position.getRow()][position.getColumn()] = true;
         }
-
-        // Movimento Suldeste.
 
         position.setValues(position.getRow() +1 ,position.getColumn()-2);
         if(getBoard().positionExists(position) && canMove(position)){
