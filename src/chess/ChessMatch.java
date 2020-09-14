@@ -3,6 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
+import chess.piece.Bishop;
 import chess.piece.King;
 import chess.piece.Rook;
 
