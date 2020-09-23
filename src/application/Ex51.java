@@ -38,7 +38,12 @@ public class Ex51 {
 
                 if (capturedPiece!= null){
                     captured.add(capturedPiece);
+                }
 
+                if(chessMatch.getPromoted() != null){
+                    System.out.print("Digite a peça para promoção (B/N/R/Q)");
+                    String type = scanner.nextLine();
+                    ChessMatch.replacePromotedPiece(type);
                 }
             }
             catch (ChessException chessException){
