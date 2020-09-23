@@ -68,9 +68,4 @@ public class Rook extends ChessPiece {
         return matrix;
     }
 
-    @Override
-    public void remove(Piece capturedPiece) {
-
-    }
-
 }

@@ -6,7 +6,7 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
-public abstract class Knight extends ChessPiece {
+public class Knight extends ChessPiece {
 
     private ChessMatch chessMatch;
 

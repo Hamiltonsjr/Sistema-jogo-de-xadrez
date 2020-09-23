@@ -6,7 +6,7 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
-public abstract class King extends ChessPiece {
+public class King extends ChessPiece {
 
     private ChessMatch chessMatch;
 
@@ -119,7 +119,6 @@ public abstract class King extends ChessPiece {
                 }
             }
         }
-
 
         return matrix;
     }

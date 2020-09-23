@@ -69,10 +69,4 @@ public class Bishop extends ChessPiece {
 
         return matrix;
     }
-
-    @Override
-    public void remove(Piece capturedPiece) {
-
-    }
-
 }

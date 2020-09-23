@@ -3,9 +3,13 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
+import chess.piece.Bishop;
+import chess.piece.Pawn;
+import chess.piece.King;
+import chess.piece.Rook;
+import chess.piece.Queen;
 import chess.piece.*;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -123,7 +127,7 @@ public class ChessMatch {
             throw  new IllegalStateException("Não a peça para ser promovida.");
         }
         if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")){
-            throw new InvalidParameterException("Tipo de promoção inválida.");
+            return promoted;
 
         }
 
@@ -153,7 +157,7 @@ public class ChessMatch {
 
         if(capturedPiece != null){
             pieceOnTheBoard.remove(capturedPiece);
-            capturedPiece.add(capturedPiece);
+           // capturedPiece.add(capturedPiece);
 
         }
         // specialMove castling Kingside rook
@@ -320,7 +324,7 @@ public class ChessMatch {
             }
 
         }
-        return true
+        return true;
     }
 
 
@@ -329,20 +333,6 @@ public class ChessMatch {
         pieceOnTheBoard.add(piece);
     }
     private void initialSetup(){
-        /*placeNewPiece('c', 1, new Rook(board, Color.WHITE));
-        placeNewPiece('c', 2, new Rook(board, Color.WHITE));
-        placeNewPiece('d', 2, new Rook(board, Color.WHITE));
-        placeNewPiece('e', 2, new Rook(board, Color.WHITE));
-        placeNewPiece('e', 1, new Rook(board, Color.WHITE));
-        placeNewPiece('d', 1, new King(board, Color.WHITE));
-
-        placeNewPiece('c', 7, new Rook(board, Color.BLACK));
-        placeNewPiece('c', 8, new Rook(board, Color.BLACK));
-        placeNewPiece('d', 7, new Rook(board, Color.BLACK));
-        placeNewPiece('e', 7, new Rook(board, Color.BLACK));
-        placeNewPiece('e', 8, new Rook(board, Color.BLACK));
-        placeNewPiece('d', 8, new King(board, Color.BLACK));
-        placeNewPiece('b', 6, new Rook(board, Color.WHITE));*/
 
         placeNewPiece('a', 1, new Rook(board, Color.WHITE));
         placeNewPiece('b', 1, new Knight(board, Color.WHITE));

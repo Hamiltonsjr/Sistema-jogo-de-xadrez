@@ -42,8 +42,13 @@ public class Ex51 {
 
                 if(chessMatch.getPromoted() != null){
                     System.out.print("Digite a peça para promoção (B/N/R/Q)");
-                    String type = scanner.nextLine();
-                    ChessMatch.replacePromotedPiece(type);
+                    String type = scanner.nextLine().toUpperCase();
+                    while (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")){
+                        System.out.print("Valor digitado inválido digite novamente (B/N/R/Q)");
+                        type = scanner.nextLine().toUpperCase();
+                    }
+
+                    chessMatch.replacePromotedPiece(type);
                 }
             }
             catch (ChessException chessException){
@@ -58,8 +63,5 @@ public class Ex51 {
         }
         UI.clearScreen();
         UI.printMatch(chessMatch,captured);
-
     }
-
-
 }
